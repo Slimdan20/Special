@@ -25,9 +25,16 @@ jobs:
           path: ~/artifacts
           destination: node-build
       - browser-tools/install-chrome
+      -run:
+          name: Start Vite Dev Server
+          command: npm run dev
+          background: true
+      -run:
+          name: Wait for Vite Server to Start
+          command: sleep
       - run: 
           name: Run Lighthouse CI
-          command: npx lhci autorun
+          command: npx lhci autorun --chrome-flags="--no-sandbox --ignore-certificate-errors"
   deploy:
     # This is an example deploy job, not actually used by the workflow
     docker:

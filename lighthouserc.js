@@ -1,5 +1,5 @@
 export const ci = { 
-    collect: { url: ['http://localhost:5173/'], 
+    collect: { url: ['http://localhost:5173'], 
     }, 
     assert: { 
         assertions: { 
