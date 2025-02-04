@@ -29,9 +29,6 @@ jobs:
           name: Start Vite Dev Server
           command: npm run dev
           background: true
-      - run:
-          name: Wait for Vite Server to Start
-          command: sleep 10
       - run: 
           name: Run Lighthouse CI
           command: npx lhci autorun --chrome-flags="--no-sandbox --ignore-certificate-errors"
