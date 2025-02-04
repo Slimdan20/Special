@@ -25,11 +25,11 @@ jobs:
           path: ~/artifacts
           destination: node-build
       - browser-tools/install-chrome
-      -run:
+      - run:
           name: Start Vite Dev Server
           command: npm run dev
           background: true
-      -run:
+      - run:
           name: Wait for Vite Server to Start
           command: sleep
       - run: 
